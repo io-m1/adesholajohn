@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adesola John Olugbemi — Telecom Field Engineer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root{
+    --navy:#0F1E2E;
+    --navy-2:#152A40;
+    --amber:#FF6A13;
+    --steel:#3E7CB1;
+    --concrete:#E8EAED;
+    --paper:#FAFAF8;
+    --ink:#1A2530;
+    --slate:#6B7A87;
+    --line: rgba(255,255,255,0.12);
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    font-family:'IBM Plex Sans', sans-serif;
+    color:var(--ink);
+    background:#fff;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Space Grotesk', sans-serif;
+    line-height:1.1;
+    letter-spacing:-0.01em;
+  }
+
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+    letter-spacing:0.04em;
+  }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--amber);
+    font-weight:500;
+  }
+
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- Link divider (signature element) ---------- */
+  .link-divider{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin: 6px 0 36px;
+  }
+  .link-divider svg{ flex-shrink:0; }
+  .link-divider .link-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--slate);
+    white-space:nowrap;
+  }
+  .link-divider .link-rule{
+    flex:1;
+    height:1px;
+    background: repeating-linear-gradient(to right, var(--slate) 0 6px, transparent 6px 12px);
+    opacity:0.5;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background: var(--navy);
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+    padding: 64px 0 80px;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 80% 60% at 70% 20%, black 0%, transparent 70%);
+    opacity:0.6;
+  }
+  .hero .wrap{ position:relative; z-index:2; }
+
+  .hero-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:56px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.12em;
+    color:rgba(255,255,255,0.7);
+    flex-wrap:wrap;
+    gap:12px;
+  }
+  .status-badge{
+    display:inline-flex; align-items:center; gap:8px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:6px 14px;
+    color:var(--amber);
+    background: rgba(255,106,19,0.08);
+  }
+  .status-dot{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--amber);
+    box-shadow:0 0 0 0 rgba(255,106,19,0.6);
+    animation: pulse 2.4s infinite;
+  }
+  @media (prefers-reduced-motion: reduce){ .status-dot{ animation:none; } }
+  @keyframes pulse{
+    0%{ box-shadow:0 0 0 0 rgba(255,106,19,0.5); }
+    70%{ box-shadow:0 0 0 8px rgba(255,106,19,0); }
+    100%{ box-shadow:0 0 0 0 rgba(255,106,19,0); }
+  }
+
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.4fr 0.9fr;
+    gap:48px;
+    align-items:center;
+  }
+
+  .hero h1{
+    font-size: clamp(2.4rem, 5.2vw, 4.2rem);
+    font-weight:700;
+    margin: 14px 0 10px;
+  }
+  .hero .role{
+    font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+    color: var(--steel);
+    font-weight:600;
+    margin-bottom:18px;
+  }
+  .hero p.lede{
+    font-size:1.02rem;
+    color:rgba(255,255,255,0.78);
+    max-width:46ch;
+    margin-bottom: 32px;
+  }
+
+  .hero-stats{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:1px;
+    background: var(--line);
+    border:1px solid var(--line);
+    border-radius:10px;
+    overflow:hidden;
+  }
+  .hero-stats div{
+    background: rgba(255,255,255,0.03);
+    padding:18px 20px;
+  }
+  .hero-stats .num{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:1.7rem;
+    font-weight:700;
+    color:#fff;
+  }
+  .hero-stats .lbl{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.55);
+    margin-top:4px;
+  }
+
+  /* portrait / link diagram panel */
+  .hero-panel{
+    position:relative;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:28px;
+    background: rgba(255,255,255,0.03);
+    text-align:center;
+  }
+  .hero-portrait{
+    width:140px; height:140px;
+    border-radius:10px;
+    overflow:hidden;
+    margin: 0 auto 18px;
+    border: 1px solid var(--line);
+  }
+  .hero-portrait img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .hero-panel .name-tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.55);
+    margin-bottom:6px;
+  }
+  .hero-panel .loc{
+    font-weight:600;
+    margin-bottom:18px;
+  }
+  .hero-panel .link-graphic{ margin: 18px 0 6px; }
+
+  /* ---------- Sections ---------- */
+  section{ padding: 72px 0; background: #fff; }
+  section.alt{ background: #F3F6F9; }
+
+  .section-head{ margin-bottom: 8px; }
+  .section-head h2{
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight:700;
+    margin: 6px 0 0;
+  }
+
+  /* ---------- Profile ---------- */
+  .profile-body{
+    display:grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap:56px;
+    align-items:start;
+  }
+
+  /* Prose column */
+  .profile-prose p{
+    font-size:1.06rem;
+    line-height:1.85;
+    color:var(--ink);
+    margin-bottom:22px;
+  }
+  .profile-prose p:last-child{ margin-bottom:0; }
+
+  /* Pull-quote callout */
+  .profile-pull{
+    margin:28px 0;
+    padding:18px 22px;
+    background:rgba(255,106,19,0.06);
+    border-left:3px solid var(--amber);
+    border-radius:0 10px 10px 0;
+  }
+  .profile-pull p{
+    font-family:'Space Grotesk', sans-serif !important;
+    font-size:1.08rem !important;
+    font-weight:600 !important;
+    line-height:1.55 !important;
+    color:var(--navy) !important;
+    margin-bottom:0 !important;
+  }
+
+  /* Dark card sidebar */
+  .profile-side{
+    background:var(--navy);
+    border-radius:14px;
+    padding:28px 28px 24px;
+    position:sticky;
+    top:24px;
+  }
+  .profile-side h4{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    text-transform:uppercase;
+    letter-spacing:0.22em;
+    color:var(--amber);
+    margin-bottom:18px;
+  }
+  .profile-side ul{ list-style:none; }
+  .profile-side li{
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:0.93rem;
+    padding:11px 0;
+    border-top:1px solid rgba(255,255,255,0.1);
+    display:flex;
+    justify-content:space-between;
+    gap:14px;
+    align-items:baseline;
+  }
+  .profile-side li:first-of-type{ border-top:none; }
+  .profile-side li span:first-child{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.42);
+    flex-shrink:0;
+  }
+  .profile-side li span:last-child{
+    color:#fff;
+    text-align:right;
+    font-weight:500;
+  }
+
+  /* ---------- Network cards ---------- */
+  .network-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:24px;
+  }
+  .network-card{
+    background:#fff;
+    border:1px solid #CBD2DA;
+    border-radius:12px;
+    padding:28px;
+    position:relative;
+  }
+  .network-card .net-badge{
+    display:inline-block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--steel);
+    border:1px solid var(--steel);
+    border-radius:999px;
+    padding:4px 12px;
+    margin-bottom:14px;
+  }
+  .network-card h3{ font-size:1.35rem; margin-bottom:4px; }
+  .network-card .via{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--slate);
+    margin-bottom:16px;
+  }
+  .network-card ul{ list-style:none; }
+  .network-card li{
+    padding-left:18px;
+    position:relative;
+    margin-bottom:8px;
+    font-size:0.95rem;
+  }
+  .network-card li::before{
+    content:"";
+    position:absolute; left:0; top:0.55em;
+    width:7px; height:7px;
+    background:var(--amber);
+    transform:rotate(45deg);
+  }
+
+  /* ---------- Capability cards ---------- */
+  .cap-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+  }
+  .cap-card{
+    background:#F7F9FB;
+    border:1px solid #CBD2DA;
+    border-radius:12px;
+    padding:24px;
+  }
+  .cap-card .cap-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.75rem;
+    color:var(--amber);
+    margin-bottom:10px;
+  }
+  .cap-card h3{ font-size:1.08rem; margin-bottom:10px; }
+  .cap-card p{ font-size:0.92rem; color:var(--slate); }
+
+  /* ---------- Timeline ---------- */
+  .timeline{
+    position:relative;
+    padding-left: 28px;
+    border-left: 2px solid #CBD2DA;
+  }
+  .tl-item{
+    position:relative;
+    padding-bottom: 28px;
+  }
+  .tl-item:last-child{ padding-bottom:0; }
+  .tl-item::before{
+    content:"";
+    position:absolute;
+    left:-34px; top:4px;
+    width:11px; height:11px;
+    background:var(--amber);
+    border-radius:50%;
+    border:3px solid #fff;
+    box-shadow: 0 0 0 2px #CBD2DA;
+  }
+  .tl-item .tl-year{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--steel);
+    margin-bottom:4px;
+  }
+  .tl-item h4{ font-size:1.02rem; margin-bottom:2px; }
+  .tl-item p{ font-size:0.9rem; color:var(--slate); }
+
+  /* ---------- Drive Panel ---------- */
+  .drive-panel{
+    margin-bottom:18px;
+    border-radius:12px;
+    border:1px solid #CBD2DA;
+    overflow:hidden;
+  }
+  .drive-panel-inner{
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    padding:20px 22px;
+    background:#F7F9FB;
+  }
+  .drive-icon{ padding-top:2px; flex-shrink:0; }
+  .drive-fields{ flex:1; }
+  .drive-label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.13em;
+    text-transform:uppercase;
+    color:var(--slate);
+    margin-bottom:8px;
+  }
+  .drive-help-link{
+    font-size:0.68rem;
+    color:var(--steel);
+    text-decoration:none;
+    border-bottom:1px dashed currentColor;
+    margin-left:auto;
+  }
+  .drive-help-link:hover{ color:var(--amber); }
+  .drive-input-row{
+    display:flex;
+    gap:8px;
+    margin-bottom:8px;
+  }
+  .drive-api-input{
+    flex:1;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.82rem;
+    border:1px solid #CBD2DA;
+    border-radius:8px;
+    padding:9px 14px;
+    outline:none;
+    color:var(--ink);
+    background:#fff;
+    transition:border-color 0.2s;
+  }
+  .drive-api-input:focus{ border-color:var(--steel); }
+  .drive-connect-btn{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:0.84rem;
+    font-weight:600;
+    background:var(--navy);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    padding:9px 18px;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:opacity 0.2s;
+  }
+  .drive-connect-btn:hover{ opacity:0.85; }
+  .drive-status{
+    min-height:18px;
+    margin-bottom:6px;
+  }
+  .drive-hint{
+    font-size:0.8rem;
+    color:var(--slate);
+    line-height:1.5;
+    margin:0;
+  }
+  /* Override button on drive-filled slots */
+  .gallery-drive-override{
+    position:absolute;
+    bottom:48px; left:10px;
+    cursor:pointer;
+    z-index:4;
+  }
+  .gallery-drive-override input{ display:none; }
+  .gallery-drive-override span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.65rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.7);
+    background:rgba(10,20,32,0.7);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:6px;
+    padding:4px 9px;
+    backdrop-filter:blur(4px);
+    transition:all 0.18s;
+  }
+  .gallery-drive-override:hover span{
+    background:rgba(255,106,19,0.7);
+    border-color:transparent;
+    color:#fff;
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery-header-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    margin-bottom:24px;
+  }
+  .gallery-edit-toggle{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--slate);
+    background:none;
+    border:1px solid #DDE1E5;
+    border-radius:999px;
+    padding:7px 18px;
+    cursor:pointer;
+    transition:all 0.2s;
+  }
+  .gallery-edit-toggle:hover,
+  .gallery-edit-toggle.active{
+    border-color:var(--amber);
+    color:var(--amber);
+    background:rgba(255,106,19,0.05);
+  }
+  .gallery-save-bar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    background:var(--navy);
+    border-radius:12px;
+    padding:14px 22px;
+    margin-bottom:22px;
+    flex-wrap:wrap;
+  }
+  .gallery-save-btn{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:0.88rem;
+    font-weight:600;
+    background:var(--amber);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    padding:10px 24px;
+    cursor:pointer;
+    white-space:nowrap;
+    transition:opacity 0.2s;
+    flex-shrink:0;
+  }
+  .gallery-save-btn:hover{ opacity:0.85; }
+  .gallery-save-btn:disabled{ opacity:0.5; cursor:default; }
+  .gallery-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:18px;
+  }
+  .gallery-item{
+    aspect-ratio:4/3;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+    background: linear-gradient(145deg, #111e2b 0%, #0d1821 100%);
+    cursor:default;
+  }
+  /* empty slot pattern */
+  .gallery-item.empty{
+    background-image:
+      linear-gradient(145deg, #111e2b 0%, #0d1821 100%),
+      repeating-linear-gradient(0deg, transparent, transparent 22px, rgba(255,255,255,0.03) 22px, rgba(255,255,255,0.03) 23px),
+      repeating-linear-gradient(90deg, transparent, transparent 22px, rgba(255,255,255,0.03) 22px, rgba(255,255,255,0.03) 23px);
+    background-blend-mode: normal;
+  }
+  .gallery-item.empty::before{
+    content:'';
+    position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 22px, rgba(255,255,255,0.025) 22px, rgba(255,255,255,0.025) 23px),
+      repeating-linear-gradient(90deg, transparent, transparent 22px, rgba(255,255,255,0.025) 22px, rgba(255,255,255,0.025) 23px);
+  }
+  .gallery-img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .gallery-item .cap{
+    position:absolute; bottom:0; left:0; right:0;
+    padding:14px 16px;
+    background: linear-gradient(to top, rgba(10,20,32,0.92) 0%, transparent 100%);
+    color:#fff;
+    z-index:2;
+  }
+  .gallery-item .cap .gnum{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.68rem;
+    color:var(--amber);
+    display:block;
+    margin-bottom:2px;
+    letter-spacing:0.12em;
+  }
+  .gallery-item .cap .gtitle{ font-weight:600; font-size:0.9rem; }
+  /* upload zone (edit mode, empty slot) */
+  .gallery-upload-zone{
+    position:absolute; inset:0;
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    gap:10px;
+    cursor:pointer;
+    z-index:3;
+    transition:background 0.2s;
+  }
+  .gallery-upload-zone:hover{ background:rgba(255,106,19,0.12); }
+  .gallery-upload-zone svg{ opacity:0.35; transition:opacity 0.2s; }
+  .gallery-upload-zone:hover svg{ opacity:0.7; }
+  .gallery-upload-zone span{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:rgba(255,255,255,0.5);
+    transition:color 0.2s;
+  }
+  .gallery-upload-zone:hover span{ color:var(--amber); }
+  .gallery-upload-zone input[type=file]{
+    position:absolute; inset:0;
+    opacity:0; cursor:pointer; width:100%; height:100%;
+  }
+  /* delete button (edit mode, filled slot) */
+  .gallery-delete{
+    position:absolute; top:10px; right:10px;
+    width:30px; height:30px;
+    border-radius:50%;
+    background:rgba(10,20,32,0.75);
+    color:#fff;
+    border:1px solid rgba(255,255,255,0.25);
+    font-size:1rem; line-height:1;
+    cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    z-index:4;
+    transition:background 0.18s, border-color 0.18s;
+    backdrop-filter:blur(4px);
+  }
+  .gallery-delete:hover{ background:rgba(200,40,40,0.8); border-color:transparent; }
+    padding:14px 16px;
+    background: linear-gradient(to top, rgba(15,30,46,0.85), transparent);
+    color:#fff;
+  }
+  .gallery-item .cap .gnum{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    color:var(--amber);
+    display:block;
+    margin-bottom:2px;
+  }
+  .gallery-item .cap .gtitle{ font-weight:600; font-size:0.92rem; }
+
+  /* ---------- Toolkit ---------- */
+  .toolkit-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:18px;
+  }
+  .toolkit-group h4{
+    font-size:0.78rem;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    color:var(--steel);
+    margin-bottom:12px;
+  }
+  .toolkit-group ul{ list-style:none; }
+  .toolkit-group li{
+    font-size:0.92rem;
+    padding:8px 0;
+    border-top:1px solid #DDE1E5;
+  }
+  .toolkit-group li:first-child{ border-top:none; }
+
+  /* ---------- Certifications ---------- */
+  .cert-list{ display:flex; flex-direction:column; gap:14px; }
+  .cert-row{
+    display:grid;
+    grid-template-columns: 160px 1fr auto;
+    gap:18px;
+    align-items:center;
+    background:#fff;
+    border:1px solid #DDE1E5;
+    border-radius:10px;
+    padding:16px 20px;
+  }
+  .cert-row .cert-issuer{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.08em;
+    color:var(--steel);
+  }
+  .cert-row h4{ font-size:1rem; margin:2px 0 0; }
+  .cert-row .cert-date{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.8rem;
+    color:var(--slate);
+    text-align:right;
+    white-space:nowrap;
+  }
+
+  /* ---------- Why / Contact ---------- */
+  .why-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:24px;
+    margin-bottom:48px;
+  }
+  .why-card h3{ font-size:1.1rem; margin-bottom:8px; }
+  .why-card p{ font-size:0.93rem; color:var(--slate); }
+  .why-card .why-mark{
+    font-family:'Space Grotesk', sans-serif;
+    font-size:1.6rem;
+    color:var(--amber);
+    margin-bottom:10px;
+    font-weight:700;
+  }
+
+  .contact-band{
+    background: var(--navy);
+    color:#fff;
+    border-radius:16px;
+    padding: 40px;
+    display:grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap:32px;
+    align-items:center;
+  }
+  .contact-band h3{ font-size:1.6rem; margin-bottom:10px; }
+  .contact-band p{ color:rgba(255,255,255,0.7); font-size:0.95rem; max-width:42ch; }
+  .contact-list{ list-style:none; font-family:'IBM Plex Mono', monospace; font-size:0.9rem; }
+  .contact-list li{
+    padding:10px 0;
+    border-top:1px solid var(--line);
+    display:flex; justify-content:space-between; gap:16px;
+    color:rgba(255,255,255,0.9);
+  }
+  .contact-list li:first-child{ border-top:none; }
+  .contact-list span:first-child{ color:rgba(255,255,255,0.5); }
+
+  footer{
+    text-align:center;
+    padding: 28px 0 40px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.75rem;
+    color:var(--slate);
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 860px){
+    .hero-grid{ grid-template-columns: 1fr; }
+    .hero-panel{ order:-1; max-width:280px; margin:0 auto; }
+    .profile-body{ grid-template-columns:1fr; }
+    .profile-side{ position:static; border-radius:12px; }
+    .network-grid{ grid-template-columns:1fr; }
+    .cap-grid{ grid-template-columns: 1fr 1fr; }
+    .gallery-grid{ grid-template-columns: 1fr 1fr; }
+    .toolkit-grid{ grid-template-columns: 1fr 1fr; }
+    .cert-row{ grid-template-columns: 1fr; text-align:left; }
+    .cert-row .cert-date{ text-align:left; }
+    .why-grid{ grid-template-columns:1fr; }
+    .contact-band{ grid-template-columns:1fr; padding:28px; }
+  }
+  @media (max-width: 560px){
+    .cap-grid{ grid-template-columns: 1fr; }
+    .gallery-grid{ grid-template-columns: 1fr; }
+    .toolkit-grid{ grid-template-columns: 1fr; }
+    .hero-stats{ grid-template-columns: 1fr; }
+    .wrap{ padding:0 20px; }
+  }
+
+  /* Print -> PDF tuning */
+  @media print{
+    section{ padding: 28px 0; }
+    .hero{ padding: 36px 0 48px; }
+    .gallery-item{ break-inside: avoid; }
+    .network-card, .cap-card, .cert-row{ break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-top">
+      <span>SITE FILE — A.J. OLUGBEMI / ACCRA, GH</span>
+      <span class="status-badge"><span class="status-dot"></span> AVAILABLE FOR DEPLOYMENT</span>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Field Engineer Profile</div>
+        <h1>Adesola John<br>Olugbemi</h1>
+        <div class="role">Telecom Field Engineer — RF &amp; Microwave Transmission</div>
+        <p class="lede">Ten years on towers, transmission links and live cutovers — building and maintaining the microwave backbone behind Ghana's mobile networks.</p>
+
+        <div class="hero-stats">
+          <div><div class="num">10+</div><div class="lbl">Years / Field Operations</div></div>
+          <div><div class="num">02</div><div class="lbl">Operator Networks</div></div>
+          <div><div class="num">02</div><div class="lbl">Equipment Ecosystems</div></div>
+          <div><div class="num">03</div><div class="lbl">Safety Certifications</div></div>
+        </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="hero-portrait">
+          <img src="data:image/jpeg;base64,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" alt="Portrait of Adesola John Olugbemi">
+        </div>
+        <div class="name-tag">Based in</div>
+        <div class="loc">Accra, Ghana</div>
+
+        <div class="link-graphic">
+          <svg width="100%" height="56" viewBox="0 0 220 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <line x1="20" y1="48" x2="20" y2="20" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+            <line x1="200" y1="48" x2="200" y2="20" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+            <rect x="12" y="44" width="16" height="6" fill="rgba(255,255,255,0.35)"/>
+            <rect x="192" y="44" width="16" height="6" fill="rgba(255,255,255,0.35)"/>
+            <circle cx="20" cy="16" r="4" fill="#FF6A13"/>
+            <circle cx="200" cy="16" r="4" fill="#FF6A13"/>
+            <line x1="24" y1="16" x2="196" y2="16" stroke="#FF6A13" stroke-width="2" stroke-dasharray="4 5"/>
+          </svg>
+        </div>
+        <div class="mono" style="font-size:0.68rem; letter-spacing:0.14em; color:rgba(255,255,255,0.5); text-transform:uppercase;">Link status — active</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PROFILE ============ -->
+<section>
+  <div class="wrap">
+    <div class="link-divider">
+      <svg width="34" height="14" viewBox="0 0 34 14" aria-hidden="true"><circle cx="3" cy="7" r="3" fill="#FF6A13"/><line x1="6" y1="7" x2="31" y2="7" stroke="#FF6A13" stroke-width="2" stroke-dasharray="3 4"/><circle cx="31" cy="7" r="3" fill="#3E7CB1"/></svg>
+      <span class="link-label">Link 01 — Profile</span>
+      <span class="link-rule"></span>
+    </div>
+    <div class="section-head">
+      <h2>From the tower up</h2>
+    </div>
+    <br>
+    <div class="profile-body">
+      <div class="profile-prose">
+        <p>For over a decade, I've been the person operators send up the tower when a transmission link needs to go in, come down, or come back online. Since November 2015 I've worked microwave transmission for contracting outfits based in Accra — Primus Engineering / AdminTelecom, and GoodMast Telecom / Aviat Networks — climbing towers, monopoles and rooftops to install, align and commission the microwave backbone that carries voice and data traffic across Ghana's mobile networks, principally on the MTN Ghana network.</p>
+
+        <div class="profile-pull">
+          <p>"Every job closed the same way — tested, documented, and handed back to the NOC and project team with a clear, well-detailed report."</p>
+        </div>
+
+        <p>My work covers the full lifecycle of a transmission site: civil works for tower erection, GSM antenna and RRU installation, Ethernet / coaxial / fiber connectivity between nodes, -48V DC power systems, and the switching and routing configuration that brings a link into service on both Huawei and Aviat Networks equipment. I've also handled the higher-stakes end — equipment swap/change-out, traffic re-routing, and live cutover/migration during RAN modernization upgrades.</p>
+        <p>Since 2025 I've been on <strong>active field duty under Afro Egypt Engineering</strong>, deployed as a subcontractor to Huawei Technology Ghana Ltd in support of the <strong>Telecel Ghana</strong> network. Day-to-day work includes microwave link installation and alignment on Huawei transmission equipment, BTS and RRU commissioning, fiber and coaxial integration, and fault diagnosis and resolution on live operator sites across Greater Accra and beyond.</p>
+      </div>
+      <div class="profile-side">
+        <h4>At a Glance</h4>
+        <ul>
+          <li><span>Based</span><span>Accra, Ghana</span></li>
+          <li><span>Field experience</span><span>10+ years</span></li>
+          <li><span>Discipline</span><span>Microwave Transmission</span></li>
+          <li><span>Equipment</span><span>Huawei &amp; Aviat Networks</span></li>
+          <li><span>Networks worked</span><span>MTN Ghana, Telecel Ghana</span></li>
+          <li><span>Languages</span><span>English</span></li>
+          <li><span>Availability</span><span>Open to relocation</span></li>
+          <li><span>Sponsorship</span><span>Considered / welcome</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NETWORKS ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="link-divider">
+      <svg width="34" height="14" viewBox="0 0 34 14" aria-hidden="true"><circle cx="3" cy="7" r="3" fill="#FF6A13"/><line x1="6" y1="7" x2="31" y2="7" stroke="#FF6A13" stroke-width="2" stroke-dasharray="3 4"/><circle cx="31" cy="7" r="3" fill="#3E7CB1"/></svg>
+      <span class="link-label">Link 02 — Network Deployments</span>
+      <span class="link-rule"></span>
+    </div>
+    <div class="section-head">
+      <h2>Networks I've worked on the ground</h2>
+    </div>
+    <br>
+    <div class="network-grid">
+      <div class="network-card">
+        <span class="net-badge">Operator Network</span>
+        <h3>MTN Ghana</h3>
+        <div class="via">Field work contracted via GoodMast Telecom / Aviat Networks Ltd · AdminTelecom / Primus Engineering Ltd · 2015 – 2025</div>
+        <ul>
+          <li>Microwave link installation and alignment on Aviat Networks equipment</li>
+          <li>Tower, monopole and rooftop civil works and structure climbing</li>
+          <li>Switching and routing configuration and testing for live links</li>
+          <li>Equipment swap/change-out and traffic re-routing for RAN modernization cutovers</li>
+          <li>Technical site surveys and detailed completion reporting</li>
+        </ul>
+      </div>
+      <div class="network-card">
+        <span class="net-badge">Operator Network</span>
+        <h3>Telecel Ghana</h3>
+        <div class="via">Field work contracted via Afro Egypt Engineering · Huawei Technology Ghana Ltd · 2025 – Present</div>
+        <ul>
+          <li>Microwave link installation and alignment on Huawei transmission equipment</li>
+          <li>GSM antenna, RRU, trunking and circuit installation for BTS commissioning</li>
+          <li>Fiber, coaxial and Ethernet connectivity between transmission nodes</li>
+          <li>Dedicated internet &amp; leased line commissioning, testing and maintenance</li>
+          <li>Cable and transmission fault diagnosis and resolution</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAPABILITIES ============ -->
+<section>
+  <div class="wrap">
+    <div class="link-divider">
+      <svg width="34" height="14" viewBox="0 0 34 14" aria-hidden="true"><circle cx="3" cy="7" r="3" fill="#FF6A13"/><line x1="6" y1="7" x2="31" y2="7" stroke="#FF6A13" stroke-width="2" stroke-dasharray="3 4"/><circle cx="31" cy="7" r="3" fill="#3E7CB1"/></svg>
+      <span class="link-label">Link 03 — Field Capabilities</span>
+      <span class="link-rule"></span>
+    </div>
+    <div class="section-head">
+      <h2>What I do on site</h2>
+    </div>
+    <br>
+    <div class="cap-grid">
+      <div class="cap-card">
+        <div class="cap-num mono">01 / TRANSMISSION</div>
+        <h3>Microwave Transmission</h3>
+        <p>Assembly, installation and precision alignment of microwave link antennas on Huawei and Aviat Networks systems, plus switching and routing configuration to bring links into service.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-num mono">02 / STRUCTURE</div>
+        <h3>Tower &amp; Civil Works</h3>
+        <p>Climbing and working safely on towers, monopoles, rooftops and ladders, including civil works for monopole tower erection and site preparation.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-num mono">03 / RAN</div>
+        <h3>RAN Integration &amp; Commissioning</h3>
+        <p>Installation of GSM antennas, RRUs, trunking systems and circuits for BTS sites, through to full commissioning and acceptance testing.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-num mono">04 / MODERNIZATION</div>
+        <h3>Cutover &amp; Migration</h3>
+        <p>Transmission equipment swap/change-out, network and data traffic re-routing, and live cutover/migration for RAN modernization upgrades.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-num mono">05 / CONNECTIVITY</div>
+        <h3>Connectivity &amp; Power</h3>
+        <p>Ethernet, coaxial and fiber optic cabling between transmission nodes and equipment, with working knowledge of -48V DC power systems.</p>
+      </div>
+      <div class="cap-card">
+        <div class="cap-num mono">06 / ASSURANCE</div>
+        <h3>Fault Diagnosis &amp; Surveys</h3>
+        <p>Troubleshooting, locating and resolving cable and transmission faults, plus technical site surveys, spec/diagram analysis and reporting to NOC and project teams.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="link-divider">
+      <svg width="34" height="14" viewBox="0 0 34 14" aria-hidden="true"><circle cx="3" cy="7" r="3" fill="#FF6A13"/><line x1="6" y1="7" x2="31" y2="7" stroke="#FF6A13" stroke-width="2" stroke-dasharray="3 4"/><circle cx="31" cy="7" r="3" fill="#3E7CB1"/></svg>
+      <span class="link-label">Link 04 — Career Timeline</span>
+      <span class="link-rule"></span>
+    </div>
+    <div class="section-head">
+      <h2>How it built up</h2>
+    </div>
+    <br>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year mono">2012 – 2014</div>
+        <h4>Certificate &amp; Diploma, Computer Engineering</h4>
+        <p>Accra Institute of Technology, Accra, Ghana</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year mono">2013</div>
+        <h4>Technician Rigger Level I (TRI) Certificate</h4>
+        <p>AdminTelecom Academy, Accra, Ghana</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year mono">2014 – Present</div>
+        <h4>Coursework in Information Technology <span style="font-size:0.8rem;font-weight:400;color:var(--slate);">(ongoing)</span></h4>
+        <p>BlueCrest College, Accra, Ghana</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year mono">Nov 2015 – Dec 2023</div>
+        <h4>Telecommunications Field Engineer — Primus Engineering / AdminTelecom</h4>
+        <p>Microwave Transmission · MTN Ghana network</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year mono">May 2020 – Dec 2023</div>
+        <h4>Telecommunications Field Engineer — GoodMast Telecom / Aviat Networks</h4>
+        <p>Microwave Transmission · MTN Ghana network</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year mono">2025 – Present</div>
+        <h4>Telecommunications Field Engineer — Afro Egypt Engineering / Huawei Technology Ghana Ltd</h4>
+        <p>Microwave Transmission · Telecel Ghana network</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year mono">Sep 2025</div>
+        <h4>Basic Fall Arrest Technician (Int)</h4>
+        <p>Gravity Training (Pty) Ltd · valid to Sep 2028</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year mono">Oct 2025</div>
+        <h4>Standard First Aid Certificate</h4>
+        <p>Ghana Red Cross Society, Greater Accra Region · <span style="color:var(--amber);font-weight:600;">valid to Oct 2027</span></p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year mono">Apr 2026</div>
+        <h4>Electrical Safety Certificate of Completion</h4>
+        <p>JIK Management Advisory Africa Ltd · valid to Apr 2028</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year mono">2025 — Active</div>
+        <h4>Active field engineer — MTN Ghana &amp; Telecel Ghana networks</h4>
+        <p>Afro Egypt Engineering · Huawei Technology Ghana Ltd · microwave transmission, fault resolution &amp; site support</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section>
+  <div class="wrap">
+    <div class="link-divider">
+      <svg width="34" height="14" viewBox="0 0 34 14" aria-hidden="true"><circle cx="3" cy="7" r="3" fill="#FF6A13"/><line x1="6" y1="7" x2="31" y2="7" stroke="#FF6A13" stroke-width="2" stroke-dasharray="3 4"/><circle cx="31" cy="7" r="3" fill="#3E7CB1"/></svg>
+      <span class="link-label">Link 05 — Deployment Gallery</span>
+      <span class="link-rule"></span>
+    </div>
+    <div class="gallery-header-row">
+      <div class="section-head" style="margin-bottom:0">
+        <h2>Work in the field</h2>
+      </div>
+      <button id="gallery-edit-btn" class="gallery-edit-toggle" aria-label="Edit gallery">Edit Gallery</button>
+    </div>
+
+    <!-- Drive panel — visible in edit mode only -->
+    <div id="drive-panel" class="drive-panel" style="display:none">
+      <div class="drive-panel-inner">
+        <div class="drive-icon">
+          <svg width="20" height="18" viewBox="0 0 87.3 78" xmlns="http://www.w3.org/2000/svg"><path d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" fill="#0066da"/><path d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44a9.06 9.06 0 0 0 -1.2 4.5h27.5z" fill="#00ac47"/><path d="m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" fill="#ea4335"/><path d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" fill="#00832d"/><path d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" fill="#2684fc"/><path d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00"/></svg>
+        </div>
+        <div class="drive-fields">
+          <label class="drive-label">Google Drive API Key
+            <a href="https://console.cloud.google.com/apis/credentials" target="_blank" class="drive-help-link">Get a key ↗</a>
+          </label>
+          <div class="drive-input-row">
+            <input id="drive-api-input" type="password" class="drive-api-input" placeholder="AIza…" autocomplete="off" spellcheck="false">
+            <button id="drive-connect-btn" class="drive-connect-btn">Load from Drive</button>
+          </div>
+          <div id="drive-status-bar" class="drive-status"></div>
+          <p class="drive-hint">Once connected, your Drive folder auto-populates the gallery. Manual uploads override individual slots. Hit <strong>Save &amp; Download</strong> to embed everything permanently.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="gallery-save-bar" class="gallery-save-bar" style="display:none">
+      <span class="mono" style="font-size:0.76rem; color:rgba(255,255,255,0.6); letter-spacing:0.08em;">Add your site photos — click a frame to upload. Save embeds them permanently into the file.</span>
+      <button id="gallery-save-btn" class="gallery-save-btn">↓ Save &amp; Download</button>
+    </div>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </div>
+</section>
+
+<!-- ============ TOOLKIT ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="link-divider">
+      <svg width="34" height="14" viewBox="0 0 34 14" aria-hidden="true"><circle cx="3" cy="7" r="3" fill="#FF6A13"/><line x1="6" y1="7" x2="31" y2="7" stroke="#FF6A13" stroke-width="2" stroke-dasharray="3 4"/><circle cx="31" cy="7" r="3" fill="#3E7CB1"/></svg>
+      <span class="link-label">Link 06 — Toolkit</span>
+      <span class="link-rule"></span>
+    </div>
+    <div class="section-head">
+      <h2>Equipment &amp; tools</h2>
+    </div>
+    <br>
+    <div class="toolkit-grid">
+      <div class="toolkit-group">
+        <h4>Transmission</h4>
+        <ul>
+          <li>Huawei RTN Microwave</li>
+          <li>Aviat Networks Microwave Systems</li>
+        </ul>
+      </div>
+      <div class="toolkit-group">
+        <h4>Power Systems</h4>
+        <ul>
+          <li>-48V DC Power Systems</li>
+        </ul>
+      </div>
+      <div class="toolkit-group">
+        <h4>Connectivity</h4>
+        <ul>
+          <li>Fiber Optic Cabling</li>
+          <li>Coaxial Cabling</li>
+          <li>Ethernet / Structured Cabling</li>
+        </ul>
+      </div>
+      <div class="toolkit-group">
+        <h4>Software</h4>
+        <ul>
+          <li>Microsoft Word, Excel &amp; PowerPoint</li>
+          <li>Adobe PDF</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section>
+  <div class="wrap">
+    <div class="link-divider">
+      <svg width="34" height="14" viewBox="0 0 34 14" aria-hidden="true"><circle cx="3" cy="7" r="3" fill="#FF6A13"/><line x1="6" y1="7" x2="31" y2="7" stroke="#FF6A13" stroke-width="2" stroke-dasharray="3 4"/><circle cx="31" cy="7" r="3" fill="#3E7CB1"/></svg>
+      <span class="link-label">Link 07 — Certifications &amp; Training</span>
+      <span class="link-rule"></span>
+    </div>
+    <div class="section-head">
+      <h2>Credentials</h2>
+    </div>
+    <br>
+    <div class="cert-list">
+      <div class="cert-row">
+        <div class="cert-issuer">JIK MGMT ADVISORY AFRICA</div>
+        <div><h4>Electrical Safety — Certificate of Completion</h4></div>
+        <div class="cert-date">Issued Apr 2026 · Valid to Apr 2028</div>
+      </div>
+      <div class="cert-row">
+        <div class="cert-issuer">GRAVITY TRAINING (PTY) LTD</div>
+        <div><h4>Basic Fall Arrest Technician (Int)</h4></div>
+        <div class="cert-date">Issued Sep 2025 · Valid to Sep 2028</div>
+      </div>
+      <div class="cert-row">
+        <div class="cert-issuer">GHANA RED CROSS SOCIETY</div>
+        <div><h4>Standard First Aid Certificate</h4></div>
+        <div class="cert-date">Issued Oct 2025 · Greater Accra Region</div>
+      </div>
+      <div class="cert-row">
+        <div class="cert-issuer">ADMINTELECOM ACADEMY</div>
+        <div><h4>Technician Rigger Level I (TRI)</h4></div>
+        <div class="cert-date">2013</div>
+      </div>
+      <div class="cert-row">
+        <div class="cert-issuer">BLUECREST COLLEGE</div>
+        <div><h4>Coursework in Information Technology</h4></div>
+        <div class="cert-date">2014 – In Progress</div>
+      </div>
+      <div class="cert-row">
+        <div class="cert-issuer">ACCRA INSTITUTE OF TECHNOLOGY</div>
+        <div><h4>Certificate &amp; Diploma, Computer Engineering</h4></div>
+        <div class="cert-date">2012 – 2014</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY / CONTACT ============ -->
+<section class="alt">
+  <div class="wrap">
+    <div class="link-divider">
+      <svg width="34" height="14" viewBox="0 0 34 14" aria-hidden="true"><circle cx="3" cy="7" r="3" fill="#FF6A13"/><line x1="6" y1="7" x2="31" y2="7" stroke="#FF6A13" stroke-width="2" stroke-dasharray="3 4"/><circle cx="31" cy="7" r="3" fill="#3E7CB1"/></svg>
+      <span class="link-label">Link 08 — Why &amp; Contact</span>
+      <span class="link-rule"></span>
+    </div>
+    <div class="section-head">
+      <h2>Why work with me</h2>
+    </div>
+    <br>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-mark">01</div>
+        <h3>Field-tested</h3>
+        <p>Ten years of hands-on tower, transmission and commissioning work across two major Ghanaian mobile networks, on both Huawei and Aviat Networks equipment.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-mark">02</div>
+        <h3>Safety-certified</h3>
+        <p>Current certifications in Electrical Safety, Fall Arrest and First Aid, with rigger training since 2013 — ready for live-site and at-height work.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-mark">03</div>
+        <h3>Deployment-ready</h3>
+        <p>Comfortable working independently or within a team, in demanding field environments, with the documentation discipline operators and NOCs expect.</p>
+      </div>
+    </div>
+
+    <div class="contact-band">
+      <div>
+        <h3>Open to new deployments</h3>
+        <p>Available for telecom infrastructure roles in Ghana and internationally. International opportunities and visa sponsorship welcome.</p>
+      </div>
+      <ul class="contact-list">
+        <li><span>Email</span><span>a.jolugbemi@gmail.com</span></li>
+        <li><span>Phone (GH)</span><span>+233 266 287 850</span></li>
+        <li><span>Phone (GH alt)</span><span>+233 541 571 620</span></li>
+        <li><span>Phone (NG)</span><span>+234 806 025 4197</span></li>
+        <li><span>WhatsApp</span><span>+233 266 287 850</span></li>
+        <li><span>Based in</span><span>Accra, Ghana</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  ADESOLA JOHN OLUGBEMI — TELECOM FIELD ENGINEER, RF &amp; MICROWAVE TRANSMISSION — ACCRA, GHANA
+</footer>
+
+<!-- Gallery persistent data store -->
+<script id="gallery-data" type="application/json">{"images":{},"driveApiKey":"","driveSlots":[]}</script>
+
+<script>
+(function () {
+  var DRIVE_FOLDER_ID = '1ICraDvFk1WAGkWjW3uq4OZdY05iu-704';
+
+  var SLOTS = [
+    { num: '01', title: 'Tower & Monopole Climbing' },
+    { num: '02', title: 'Microwave Link Alignment' },
+    { num: '03', title: 'BTS / RRU Installation' },
+    { num: '04', title: 'Transmission Cutover & Swap' },
+    { num: '05', title: 'Fiber & Coaxial Integration' },
+    { num: '06', title: 'Technical Site Survey' }
+  ];
+
+  var dataTag = document.getElementById('gallery-data');
+  var state = { images: {}, driveApiKey: '', driveSlots: [] };
+  try { state = Object.assign(state, JSON.parse(dataTag.textContent.trim())); } catch (e) {}
+
+  var editMode = false;
+  var driveLoading = false;
+
+  /* ─── Drive fetch ───────────────────────────── */
+  function fetchDriveImages(apiKey) {
+    driveLoading = true;
+    updateDriveStatus('loading');
+    var q = encodeURIComponent("'" + DRIVE_FOLDER_ID + "' in parents and mimeType contains 'image/' and trashed = false");
+    var fields = encodeURIComponent('files(id,name)');
+    var url = 'https://www.googleapis.com/drive/v3/files?q=' + q + '&key=' + apiKey + '&fields=' + fields + '&orderBy=name&pageSize=20';
+    fetch(url)
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        driveLoading = false;
+        if (data.error) {
+          updateDriveStatus('error', data.error.message || 'Drive API error');
+          return;
+        }
+        var files = (data.files || []).filter(function (f) { return f.id && f.name; });
+        state.driveApiKey = apiKey;
+        state.driveSlots = files.map(function (f) {
+          return { id: f.id, name: f.name, url: 'https://drive.google.com/thumbnail?id=' + f.id + '&sz=w1200' };
+        });
+        updateDriveStatus('ok', files.length + ' photo' + (files.length !== 1 ? 's' : '') + ' loaded from Drive');
+        render();
+      })
+      .catch(function (err) {
+        driveLoading = false;
+        updateDriveStatus('error', 'Network error — check your API key and folder permissions.');
+      });
+  }
+
+  function updateDriveStatus(state_, msg) {
+    var bar = document.getElementById('drive-status-bar');
+    if (!bar) return;
+    var icon = { loading: '⟳', ok: '✓', error: '⚠' }[state_] || '';
+    var color = { loading: '#3E7CB1', ok: '#2a9d5c', error: '#c0392b' }[state_] || '#666';
+    bar.innerHTML = '<span style="color:' + color + ';font-family:IBM Plex Mono,monospace;font-size:0.78rem;letter-spacing:0.1em;">' + icon + '&nbsp;' + (msg || '') + '</span>';
+  }
+
+  /* ─── resolve slot image (manual > drive > empty) ── */
+  function slotSrc(i) {
+    if (state.images[i]) return { src: state.images[i], fromDrive: false };
+    if (state.driveSlots[i]) return { src: state.driveSlots[i].url, fromDrive: true };
+    return null;
+  }
+
+  /* ─── render ────────────────────────────────── */
+  function render() {
+    var grid = document.getElementById('gallery-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    SLOTS.forEach(function (slot, i) {
+      var img = slotSrc(i);
+      var item = document.createElement('div');
+      item.className = 'gallery-item' + (img ? '' : ' empty');
+
+      if (img) {
+        var el = document.createElement('img');
+        el.className = 'gallery-img';
+        el.src = img.src;
+        el.alt = slot.title;
+        item.appendChild(el);
+
+        if (editMode) {
+          var del = document.createElement('button');
+          del.className = 'gallery-delete';
+          del.title = img.fromDrive ? 'Override with upload' : 'Remove photo';
+          del.innerHTML = img.fromDrive ? '&#8593;' : '&times;';
+          del.dataset.idx = i;
+          del.dataset.fromDrive = img.fromDrive ? '1' : '0';
+          del.addEventListener('click', handleDelete);
+          item.appendChild(del);
+
+          /* if drive image, also allow manual override */
+          if (img.fromDrive) {
+            var ovr = document.createElement('label');
+            ovr.className = 'gallery-drive-override';
+            ovr.title = 'Upload to override this slot';
+            ovr.innerHTML = '<input type="file" accept="image/*" data-idx="' + i + '"><span>Upload override</span>';
+            ovr.querySelector('input').addEventListener('change', handleUpload);
+            item.appendChild(ovr);
+          }
+        }
+      } else {
+        if (editMode) {
+          var zone = document.createElement('label');
+          zone.className = 'gallery-upload-zone';
+          zone.title = 'Add photo';
+          zone.innerHTML =
+            '<svg width="36" height="36" viewBox="0 0 36 36" fill="none">' +
+              '<rect x="3" y="3" width="30" height="30" rx="3" stroke="white" stroke-width="1.5"/>' +
+              '<line x1="11" y1="18" x2="25" y2="18" stroke="white" stroke-width="1.5"/>' +
+              '<line x1="18" y1="11" x2="18" y2="25" stroke="white" stroke-width="1.5"/>' +
+            '</svg><span>Add photo</span>' +
+            '<input type="file" accept="image/*" data-idx="' + i + '">';
+          zone.querySelector('input').addEventListener('change', handleUpload);
+          item.appendChild(zone);
+        }
+      }
+
+      var cap = document.createElement('div');
+      cap.className = 'cap';
+      cap.innerHTML =
+        '<span class="gnum mono">' + slot.num + '</span>' +
+        '<span class="gtitle">' + slot.title + '</span>';
+      item.appendChild(cap);
+      grid.appendChild(item);
+    });
+  }
+
+  /* ─── upload ────────────────────────────────── */
+  function handleUpload(e) {
+    var idx = parseInt(e.target.dataset.idx, 10);
+    var file = e.target.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function (ev) {
+      state.images[idx] = ev.target.result;
+      render();
+    };
+    reader.readAsDataURL(file);
+  }
+
+  /* ─── delete ────────────────────────────────── */
+  function handleDelete(e) {
+    var idx = parseInt(e.currentTarget.dataset.idx, 10);
+    var fromDrive = e.currentTarget.dataset.fromDrive === '1';
+    if (!fromDrive) {
+      delete state.images[idx];
+    } else {
+      /* remove manual override if any */
+      delete state.images[idx];
+    }
+    render();
+  }
+
+  /* ─── toggle edit ───────────────────────────── */
+  function toggleEdit() {
+    editMode = !editMode;
+    var btn = document.getElementById('gallery-edit-btn');
+    var saveBar = document.getElementById('gallery-save-bar');
+    var drivePanel = document.getElementById('drive-panel');
+    btn.textContent = editMode ? 'Done' : 'Edit Gallery';
+    btn.classList.toggle('active', editMode);
+    saveBar.style.display = editMode ? 'flex' : 'none';
+    drivePanel.style.display = editMode ? 'block' : 'none';
+    render();
+  }
+
+  /* ─── save & download ───────────────────────── */
+  function save() {
+    var saveBtn = document.getElementById('gallery-save-btn');
+    saveBtn.disabled = true;
+    saveBtn.textContent = 'Saving…';
+    /* persist current state — driveSlots excluded (re-fetched on load) */
+    var toSave = { images: state.images, driveApiKey: state.driveApiKey, driveSlots: state.driveSlots };
+    dataTag.textContent = JSON.stringify(toSave);
+    setTimeout(function () {
+      var html = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+      var blob = new Blob([html], { type: 'text/html; charset=utf-8' });
+      var url = URL.createObjectURL(blob);
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = 'Adesola_Olugbemi_Portfolio.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(url); }, 3000);
+      saveBtn.textContent = '✓ Downloaded';
+      setTimeout(function () { saveBtn.textContent = '↓ Save & Download'; saveBtn.disabled = false; }, 2200);
+    }, 80);
+  }
+
+  /* ─── Drive panel events ────────────────────── */
+  function initDrivePanel() {
+    var input = document.getElementById('drive-api-input');
+    var connectBtn = document.getElementById('drive-connect-btn');
+    if (!input || !connectBtn) return;
+    if (state.driveApiKey) input.value = state.driveApiKey;
+    connectBtn.addEventListener('click', function () {
+      var key = input.value.trim();
+      if (!key) { updateDriveStatus('error', 'Paste your Google API key above first.'); return; }
+      fetchDriveImages(key);
+    });
+    /* auto-load if key already saved */
+    if (state.driveApiKey) {
+      fetchDriveImages(state.driveApiKey);
+    }
+  }
+
+  /* ─── init ──────────────────────────────────── */
+  document.addEventListener('DOMContentLoaded', function () {
+    /* auto-load Drive images if key is saved */
+    if (state.driveApiKey) fetchDriveImages(state.driveApiKey);
+    render();
+    document.getElementById('gallery-edit-btn').addEventListener('click', toggleEdit);
+    document.getElementById('gallery-save-btn').addEventListener('click', save);
+    initDrivePanel();
+  });
+})();
+</script>
+
+</body>
+</html>
